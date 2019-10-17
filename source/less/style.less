@@ -44,11 +44,27 @@ img {
 
 // Шрифты
 @import 'fonts.less';
-// Блок wrapper
-@import 'blocks/wrapper.less';
 // Блок хэдэр
 @import 'blocks/header.less';
+// Блок навигации
+@import 'blocks/navigation.less';
 
 // цвета
 @white: #ffffff;
 @black: #171717;
+@nav: #413471;
+@nav-hover: #241D3E;
+@callback: #6d5cad;;
+
+
+// центровщик
+.block-center {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+//Значение параметра примеси по умолчанию
+.padding-container(@padding: 15px) {
+  padding-left: @padding;
+  padding-right: @padding;
+}
