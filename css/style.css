@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+  box-sizing: border-box;
+}
+
+/*
+// Позиционирование
+// Блочная модель
+// Типографика
+// Оформление
+// Анимация
+// Разное*/
+
+.wpapper {
+  width: 1170px;
+  padding: 0 15px;
+  height: 900px;
+  margin: 0 auto;
+  outline: 1px dashed #000;
+}
+
+header {
+  height: 110px;
+  margin: 0 auto;
+  background-color: green
+}
+
+.logo {
+  outline: 1px dashed #000;
+  width: 53px;
+  height: 55px;
+}
