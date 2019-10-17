@@ -1,0 +1,79 @@
+// Позиционирование
+// Блочная модель
+// Типографика
+// Оформление
+// Анимация
+// Разное
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 15px 0 15px;
+  width: 1170px;
+  min-height: 110px;
+  outline: 1px dashed #000;
+}
+
+
+
+// блок логотип
+.header__container-logo {
+  min-width: 270px;
+  flex-grow: 1;
+}
+
+.header__logo-link {
+  margin-left: 8px;
+  font-family: Bad-script;
+  color: black;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+
+// контакты
+.header__contacts {
+  margin-top: 28px;
+  padding: 0 34px;
+  flex-grow: 5;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header__item,
+.header__link {
+  color: @black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.header__item::before {
+  content: "";
+  background-image: url(../../img/paw-icon.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -35px;
+  width: 24px;
+  height: 21px;
+}
+
+.header__item {
+  margin-left: 95px;
+  position: relative;
+}
+
+
+
+
+
+
+
+

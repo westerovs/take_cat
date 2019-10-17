@@ -7,33 +7,36 @@
   <meta name="Keywords" content="Шаблон"> 
   <title>Шаблон</title>
   <script type="text/javascript" src="js/index.js"></script>
-  <link href="css/style.css" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body> 		
 
   <div class="wpapper">
 
     <header class="header">
-      <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
-      <h1 class="header__logo-text">Котик на час</h1>
+      <div class="header__container-logo">
+        <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
+        <span class="header__logo-text">
+          <a class="header__logo-link" href="#">Котик на час</a>
+        </span>
+      </div>
       
       <div class="header__contacts">
         <ul class="header__list">
+
           <li class="header__item">
             Пушкинская, 28
           </li>
-          <li>
+          <li class="header__item">
             <a class="header__link" href="tel:+7(928)5676454">
-              +7(928)5676454
+              + 7 928 567 64 54
             </a>
           </li>
-          <li>
+
           </ul>
         </div>
-        
       </header>
-
 
     </div>
 
