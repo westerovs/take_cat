@@ -1,8 +1,31 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+@font-face { 
+  font-family: Geometria; 
+  src: url('../fonts/Geometria-Medium.woff'); 
+}
+
+@font-face { 
+  font-family: bad_script; 
+  src: url('../fonts/bad_script.ttf'); 
 }
 
 /*
@@ -14,21 +37,68 @@
 // Разное*/
 
 .wpapper {
-  width: 1170px;
-  padding: 0 15px;
-  height: 900px;
   margin: 0 auto;
+  padding: 0 15px;
+  width: 1170px;
   outline: 1px dashed #000;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   height: 110px;
   margin: 0 auto;
-  background-color: green
+  outline: 1px dashed #000;
 }
 
-.logo {
-  outline: 1px dashed #000;
+.header__logo {
+  margin-top: 20px;
   width: 53px;
   height: 55px;
 }
+
+.header__logo-text {
+  margin-left: 10px;
+  font-family: bad_script;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.header-contacts {
+
+}
+
+.header__list {
+
+}
+
+.header__item,
+.header__link {
+  font-family: Geometria;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
