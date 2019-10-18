@@ -1,0 +1,51 @@
+.catalog {
+  .block-center;
+  .padding-container(15px);
+  margin-bottom: 152px;
+  outline: 1px dashed gold;
+}
+
+.catalog__title {
+  margin-bottom: 88px;
+  text-align: center;
+  color:  @black;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+
+// **********Галерея********* //
+
+// простое masonry, решил не использовать чужой велосипед и написал 3 строчки css. Думаю так быстрее работает и при переполнении ничего не рушится
+.catalog__galery {
+  column-width: 360px;
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.catalog__item {
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+  background: #fff;
+  z-index: 1;
+}
+
+
+.catalog__item::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  padding-left: 24px;
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  background-color: #333333;
+  text-align: left;
+
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 42px;
+}

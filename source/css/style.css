@@ -30,6 +30,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 @font-face {
   font-family: Bad-script;
@@ -39,7 +40,7 @@ img {
 @font-face {
   font-family: Geometria;
   src: url(../fonts/Geometria-Medium.woff);
-  font-display: swap;
+  font-display: fallback;
 }
 body {
   font-family: "Geometria", "Tahoma", sans-serif;
@@ -64,6 +65,10 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  outline: 1px dashed red;
+}
+.header__logo {
+  display: inline-block;
 }
 .header__logo-link {
   margin-left: 8px;
@@ -113,6 +118,7 @@ body {
 .nav {
   width: 100%;
   background-color: #413471;
+  margin-bottom: 56px;
 }
 .nav__list {
   display: -webkit-box;
@@ -177,7 +183,7 @@ body {
   left: 24px;
   cursor: pointer;
 }
-.nav__link--callback {
+.nav__callback-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +201,65 @@ body {
   font-size: 15px;
   font-weight: 500;
   line-height: 43px;
+}
+.slider {
+  margin: 0 auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 112px;
+  height: 488px;
+  outline: 1px dashed #000;
+}
+.catalog {
+  margin: 0 auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 152px;
+  outline: 1px dashed gold;
+}
+.catalog__title {
+  margin-bottom: 88px;
+  text-align: center;
+  color: #171717;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.catalog__galery {
+  -webkit-column-width: 360px;
+     -moz-column-width: 360px;
+          column-width: 360px;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.catalog__item {
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+  background: #fff;
+  z-index: 1;
+}
+.catalog__item::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  padding-left: 24px;
+  width: 100%;
+  height: 42px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #333333;
+  text-align: left;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 42px;
 }
 .block-center {
   margin: 0 auto;
