@@ -11,84 +11,109 @@
 </head>
   <body> 		
 
-    <!-- логотип / контакты -->
-    <header class="header">
-      <div class="header__container-logo">
-        <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
-        <a class="header__logo-link" href="#">Котик на час</a>
-      </div>
-      <div class="header__contacts">
-        <ul class="header__list">
-          <li class="header__item">
-            Пушкинская, 28
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="tel:+7(928)5676454">
-              + 7 928 567 64 54
+    <div class="wrapper">
+      <!-- логотип / контакты -->
+      <header class="header">
+        <div class="header__container-logo">
+          <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
+          <a class="header__logo-link" href="#">Котик на час</a>
+        </div>
+        <div class="header__contacts">
+          <ul class="header__list">
+            <li class="header__item">
+              Пушкинская, 28
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="tel:+7(928)5676454">
+                + 7 928 567 64 54
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+
+      <!-- навигация -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a  class="nav__link" href="#">О нас</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Услуги</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Сертификаты</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Условия аренды</a></li> 
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Фото</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Контакты</a></li>
+          <li class="nav__callback">
+            <a class="nav__callback-link" href="#">
+              Обратный звонок
             </a>
           </li>
         </ul>
-      </div>
-    </header>
+      </nav>
 
-    <!-- навигация -->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a  class="nav__link" href="#">О нас</a></li>
-        <li class="nav__item">
-          <a  class="nav__link" href="#">Услуги</a></li>
-        <li class="nav__item">
-          <a  class="nav__link" href="#">Сертификаты</a></li>
-        <li class="nav__item">
-          <a  class="nav__link" href="#">Условия аренды</a></li> 
-        <li class="nav__item">
-          <a  class="nav__link" href="#">Фото</a></li>
-        <li class="nav__item">
-          <a  class="nav__link" href="#">Контакты</a></li>
-        <li class="nav__callback">
-          <a class="nav__callback-link" href="#">
-            Обратный звонок
+
+      <!-- cлайдер -->
+      <div class="slider"></div>
+
+
+      <!-- каталог -->
+      <article class="catalog">
+        <h1 class="catalog__title">Возьми домой котика</h1>
+        <div class="catalog__galery">
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/1.jpg" width="360" height="224"/>
           </a>
-        </li>
-      </ul>
-    </nav>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/4.jpg" width="360" height="224"/>
+          </a>
+          <a class="catalog__item" data-title="Марта, 2 месяца" href="#">
+            <img class="catalog__img" src="/img/2.jpg" width="360" height="478"/> 
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/5.jpg" width="360" height="478"/>
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/6.jpg" width="360" height="224"/>
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/3.jpg" width="360" height="224"/> 
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="/img/7.jpg" width="360" height="224"/>
+          </a>
+        </div>
+      </article>     
+    </div>
 
+    <!-- футер -->
+    <footer class="footer">
 
+      <div class="footer__main">
 
-    <!-- cлайдер -->
-    <div class="slider"></div>
+        <div class="footer__agreements">
+          <a href="">Политика конфиденциальности</a>
+        </div>
 
-
-
-    <!-- каталог -->
-    <article class="catalog">
-      <h2 class="catalog__title">Возьми домой котика</h2>
-      <div class="catalog__galery">
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/1.jpg" width="360" height="224"/>
-        </a>
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/4.jpg" width="360" height="224"/>
-        </a>
-        <a class="catalog__item" data-title="Марта, 2 месяца" href="#">
-          <img class="catalog__img" src="/img/2.jpg" width="360" height="478"/> 
-        </a>
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/5.jpg" width="360" height="478"/>
-        </a>
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/6.jpg" width="360" height="224"/>
-        </a>
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/3.jpg" width="360" height="224"/> 
-        </a>
-        <a class="catalog__item" data-title="Люси, 3 года" href="#">
-          <img class="catalog__img" src="/img/7.jpg" width="360" height="224"/>
-        </a>
+        <div class="footer__contacts">
+          <ul class="footer__list">
+            <li class="footer__item">
+              Пушкинская, 28
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+7(928)5676454">
+                + 7 928 567 64 54
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </article>
-        
+
+    </footer> 
 
 
 

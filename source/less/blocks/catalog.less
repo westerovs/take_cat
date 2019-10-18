@@ -1,7 +1,7 @@
 .catalog {
   .block-center;
   .padding-container(15px);
-  margin-bottom: 152px;
+  margin-bottom: 124px;
   outline: 1px dashed gold;
 }
 
@@ -17,7 +17,8 @@
 
 // **********Галерея********* //
 
-// простое masonry, решил не использовать чужой велосипед и написал 3 строчки css. Думаю так быстрее работает и при переполнении ничего не рушится
+// простое masonry, решил не использовать чужой велосипед и написал 3 строчки css.
+// Думаю так быстрее работает и при переполнении ничего не рушится
 .catalog__galery {
   column-width: 360px;
   column-count: 3;
@@ -32,7 +33,7 @@
   z-index: 1;
 }
 
-
+//имена котиков
 .catalog__item::before {
   content: attr(data-title);
   position: absolute;
@@ -43,9 +44,13 @@
   box-sizing: border-box;
   background-color: #333333;
   text-align: left;
-
   color: #ffffff;
   font-size: 24px;
   font-weight: 500;
   line-height: 42px;
+}
+
+.catalog__item:hover::before {
+  background-color: #413471;
+  background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
 }

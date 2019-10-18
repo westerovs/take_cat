@@ -1,12 +1,19 @@
 // сброс для нормалайза
-
-html {
+html,
+body {
+  height: 100%;
   box-sizing: border-box;
   font-family: Geometria;
 }
 
+// для прижимания футера
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 *, *:before, *:after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 // picture {
@@ -53,6 +60,8 @@ img {
 @import 'blocks/slider.less';
 // каталог
 @import 'blocks/catalog.less';
+// футер
+@import 'blocks/footer.less';
 
 // цвета
 @white: #ffffff;
@@ -68,7 +77,6 @@ img {
   width: 1170px;
 }
 
-//Значение параметра примеси по умолчанию
 .padding-container(@padding: 15px) {
   padding-left: @padding;
   padding-right: @padding;
