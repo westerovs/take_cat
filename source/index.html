@@ -6,6 +6,8 @@
   <meta name="description" content="Возьми домой котика">
   <meta name="Keywords" content="котики"> 
   <title>Котик на час</title>
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/style.css" >
   <link rel="stylesheet" href="css/normalize.css">
 </head>
@@ -15,12 +17,12 @@
       <!-- логотип / контакты -->
       <header class="header">
         <div class="header__container-logo">
-          <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
+          <img class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
           <a class="header__logo-link" href="#">Котик на час</a>
         </div>
         <div class="header__contacts">
           <ul class="header__list">
-            <li class="header__item">
+            <li class="header__item" tabindex="0">
               Пушкинская, 28
             </li>
             <li class="header__item">
@@ -58,8 +60,20 @@
 
 
       <!-- cлайдер -->
-      <div class="slider"></div>
-
+      <div class="slider-container">
+        <section class="lazy slider" data-sizes="50vw">
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488">
+          </div>
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488">
+          </div>
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488">
+          </div>
+        </section>
+      </div>
+      
 
       <!-- каталог -->
       <article class="catalog">
@@ -87,18 +101,16 @@
             <img class="catalog__img" src="/img/7.jpg" width="360" height="224"/>
           </a>
         </div>
-      </article>     
+      </article>    
     </div>
+
 
     <!-- футер -->
     <footer class="footer">
-
       <div class="footer__main">
-
         <div class="footer__agreements">
           <a href="">Политика конфиденциальности</a>
         </div>
-
         <div class="footer__contacts">
           <ul class="footer__list">
             <li class="footer__item">
@@ -112,11 +124,14 @@
           </ul>
         </div>
       </div>
-
     </footer> 
 
 
-
-
+    <!-- скрипт слайдера -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>
+    <script src="./slick/slick.js" ></script>
+    <script src="slick/slick.min.js"></script>
+    <!-- запуск слайдера -->
+    <script src="js/slider.js" ></script>
   </body>
 </html>
