@@ -2,7 +2,6 @@
   .block-center;
   .padding-container(15px);
   margin-bottom: 124px;
-  outline: 1px dashed gold;
 }
 
 .catalog__title {
@@ -39,7 +38,7 @@
   position: absolute;
   bottom: 0;
   padding-left: 24px;
-  width: 100%;
+  width: 360px;
   height: 42px;
   box-sizing: border-box;
   background-color: #333333;
@@ -53,4 +52,33 @@
 .catalog__item:hover::before {
   background-color: #413471;
   background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
+}
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .catalog {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+  .catalog__galery {
+    column-width: 355px;
+    column-count: 2;
+    column-gap: 15px;
+  }
+
+}
+
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .catalog {
+    .width-phone;
+    margin-bottom: 0;
+  }
+  .catalog__title {
+    font-size: 36px;
+    margin: 50px 0;
+  }
 }

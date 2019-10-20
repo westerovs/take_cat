@@ -2,7 +2,6 @@
   .block-center;
   .padding-container(15px);
   margin-bottom: 112px;
-  height: 488px;    
 }
 
 // slick slaider
@@ -15,7 +14,6 @@
 .slick-prev:before,
 .slick-next:before {
   display: none;
-  // background-image: url(../../img/arr-left.svg) !important;
 }
 
 .slick-prev {
@@ -50,3 +48,24 @@
   color: red;
   fill: #fff;
 }
+
+
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .slider-container {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .slider-container {
+    .width-phone;
+    margin-bottom: 0;
+  }
+
+}
+

@@ -64,8 +64,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
-  min-width: 420px;
-  max-width: 1170px;
+  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 20px;
@@ -74,7 +73,9 @@ body {
 }
 .header__container-logo {
   min-width: 270px;
-  outline: 1px dashed red;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .header__logo {
   display: inline-block;
@@ -88,9 +89,11 @@ body {
   line-height: 24px;
 }
 .header__contacts {
-  outline: 1px dashed #000;
   margin-top: 28px;
   padding: 0 34px;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
 }
 .header__list {
   display: -webkit-box;
@@ -98,9 +101,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .header__item,
 .header__link {
@@ -122,67 +125,19 @@ body {
   margin-left: 95px;
   position: relative;
 }
-.header__item:first-child {
-  margin-left: 0px;
-}
-.header__menu {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 @media screen and (max-width: 768px) {
-  body {
-    background-color: yellow;
-  }
-  .header__logo-link {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  .header__contacts {
-    margin-top: 0px;
-  }
-  .header__list {
+  .header {
+    width: 768px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .header__item {
-    margin-bottom: 12px;
-  }
-  .header__item:first-child {
-    margin-left: 95px;
-  }
-  .header__item::before {
-    display: none;
-  }
-  .header__item::after {
-    content: "";
-    background-image: url(../../img/paw-icon.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    right: -35px;
-    width: 24px;
-    height: 21px;
+  .header__logo-link {
+    font-size: 40px;
   }
   .header__container-logo {
-    min-width: 80px;
-  }
-}
-@media screen and (max-width: 320px) {
-  body {
-    background-color: green;
+    margin: 0 auto;
   }
   .header__contacts {
     position: absolute;
@@ -193,6 +148,11 @@ body {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    width: 375px;
   }
 }
 .nav {
@@ -283,13 +243,36 @@ body {
   font-weight: 500;
   line-height: 43px;
 }
+@media screen and (max-width: 768px) {
+  .nav__list {
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav__item {
+    width: 100%;
+  }
+  .nav__callback {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  .nav__link {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nav__list {
+    width: 375px;
+  }
+}
 .slider-container {
   margin: 0 auto;
   width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 112px;
-  height: 488px;
 }
 .slick-dots li button:before {
   font-size: 25px !important;
@@ -327,13 +310,27 @@ body {
   color: red;
   fill: #fff;
 }
+@media screen and (max-width: 768px) {
+  .slider-container {
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .slider-container {
+    width: 375px;
+    margin-bottom: 0;
+  }
+}
 .catalog {
   margin: 0 auto;
   width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 124px;
-  outline: 1px dashed gold;
 }
 .catalog__title {
   margin-bottom: 88px;
@@ -366,7 +363,7 @@ body {
   position: absolute;
   bottom: 0;
   padding-left: 24px;
-  width: 100%;
+  width: 360px;
   height: 42px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -381,6 +378,36 @@ body {
   background-color: #413471;
   background-image: -webkit-gradient(linear, right top, left top, from(#7ac398), to(#01abce));
   background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
+}
+@media screen and (max-width: 768px) {
+  .catalog {
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .catalog__galery {
+    -webkit-column-width: 355px;
+       -moz-column-width: 355px;
+            column-width: 355px;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .catalog {
+    width: 375px;
+    margin-bottom: 0;
+  }
+  .catalog__title {
+    font-size: 36px;
+    margin: 50px 0;
+  }
 }
 .wrapper,
 .footer {
@@ -407,6 +434,7 @@ body {
   width: 1170px;
   padding: 33px 15px 0 15px;
   min-height: 133px;
+  background-color: #d3d3d0;
 }
 .footer__agreements a {
   text-decoration: underline;
@@ -425,9 +453,38 @@ body {
 .footer__item {
   margin-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
+  .footer__main {
+    width: 768px;
+  }
+  .footer__agreements a,
+  .footer__item,
+  .footer__link {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer__main {
+    width: 375px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__agreements {
+    margin-bottom: 20px;
+  }
+}
 .block-center {
   margin: 0 auto;
   width: 1170px;
+}
+.nav__active {
+  color: #ccc;
+  font-size: bold;
 }
 .visually-hidden {
   position: absolute;

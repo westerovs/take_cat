@@ -69,21 +69,38 @@ img {
 @nav: #413471;
 @nav-hover: #241D3E;
 @callback: #6d5cad;;
+@footer-bg: #d3d3d0;
 
-
-// центровщик
+// декстоп центровщик
 .block-center {
   margin: 0 auto;
   width: 1170px;
 }
 
+// активная ссылка
+.nav__active {
+  color: #ccc;
+  font-size: bold;
+}
+
+// размер планшета
+.width-tablet(@width: 768px) {
+  width: @width;
+}
+
+// размер телефона
+.width-phone(@width: 375px) {
+  width: @width;
+}
+
+
+// общий паддинг страницы
 .padding-container(@padding: 15px) {
   padding-left: @padding;
   padding-right: @padding;
 }
 
-
-// display-hidden
+// альтернатива дисп.none
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -94,9 +111,3 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-
-
-// @media screen and (min-width: 320px) 
-
-// @media screen and (min-width: 768px) 

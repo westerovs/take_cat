@@ -19,6 +19,8 @@
   text-align: center;
 }
 
+
+
 .nav__link {
   display: flex;
   flex-direction: column;
@@ -27,7 +29,7 @@
   height: 100%;
   color: @white;
   font-size: 15px;
-  font-weight: 500;   
+  font-weight: 500;
   line-height: 56px;
 }
 
@@ -44,6 +46,7 @@
   border-radius: 22px;
   background-color: @callback;
   text-align: center;
+
 }
 
 .nav__callback::before {
@@ -69,4 +72,39 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 43px;
+}
+
+
+
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .nav__list {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+  .nav__item {
+    width: 100%;
+  }
+
+  .nav__callback {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+  }
+}
+
+
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .nav__list {
+    .width-phone;
+  }
+
 }

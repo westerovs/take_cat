@@ -2,20 +2,17 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  min-width: 420px;
-  max-width: 1170px;
+  .block-center;
   .padding-container(15px);
   padding-top: 20px;
   min-height: 110px;
   outline: 1px dashed #000;
 }
 
-
 // блок логотип
 .header__container-logo {
   min-width: 270px;
-  outline: 1px dashed red;
+  flex-grow: 1;
 }
 
 .header__logo {
@@ -32,17 +29,18 @@
 }
 
 
+
 // контакты
 .header__contacts {
-  outline: 1px dashed #000;
   margin-top: 28px;
   padding: 0 34px;
+  flex-grow: 5;
 }
 
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .header__item,
@@ -66,67 +64,23 @@
 .header__item {
   margin-left: 95px;
   position: relative;
-  &:first-child {
-    margin-left: 0px;
-  }
-}
-// кнопка меню
-.header__menu {
-  .visually-hidden;
 }
 
 
-// ***********tablet*******************
-
+// ********** tablet **********
 @media screen and (max-width: 768px) {
-
-  body {
-    background-color: yellow;
-  }
-
-  .header__logo-link {
-    .visually-hidden;
-  }
-
-  .header__contacts {
-    margin-top: 0px;
-  }
-
-  .header__list {
+  
+  .header {
+    .width-tablet;
     flex-direction: column;
   }
 
-  .header__item {
-    margin-bottom: 12px;
-    &:first-child {
-      margin-left: 95px;
-    }
-  }
-
-  .header__item::before {
-    display: none;
-  }
-
-  .header__item::after {
-    content: "";
-    background-image: url(../../img/paw-icon.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    right: -35px;
-    width: 24px;
-    height: 21px;
+  .header__logo-link {
+    font-size: 40px;
   }
 
   .header__container-logo {
-    min-width: 80px;
-  }
-}
-
-// ***********phone*******************
-
-@media screen and (max-width: 320px) {
-  body {
-    background-color: green;
+    margin: 0 auto;
   }
 
   .header__contacts {
@@ -134,6 +88,15 @@
   }
 }
 
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .header {
+    .width-phone;
+  }
+
+}
 
 
 

@@ -7,7 +7,7 @@
 .footer {
   flex-grow: 0;
   width: 100%;
-  background-color: #d3d3d0;
+  background-color: @footer-bg;
   background-image: url(../../img/points-bg.png);
 }
 
@@ -17,6 +17,7 @@
   .block-center;
   padding: 33px 15px 0 15px;
   min-height: 133px;
+  background-color: @footer-bg;
 }
 
 // политика конфиденциальности
@@ -28,7 +29,7 @@
 .footer__agreements a,
 .footer__item,
 .footer__link {
-  color: #ffffff;
+  color: @white;
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
@@ -42,8 +43,34 @@
   margin-bottom: 10px;
 }
 
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .footer__main {
+    .width-tablet;
+  }
+  .footer__agreements a,
+  .footer__item,
+  .footer__link {
+    font-size: 20px;
+  }
 
+}
 
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .footer__main {
+    .width-phone;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer__agreements {
+    margin-bottom: 20px;
+  }
+
+}
 
 
 
