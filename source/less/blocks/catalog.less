@@ -1,0 +1,108 @@
+.catalog {
+  .block-center;
+  .padding-container(15px);
+  margin-bottom: 124px;
+}
+
+.catalog__title {
+  margin-bottom: 88px;
+  text-align: center;
+  color:  @black;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+
+// **********Галерея********* //
+
+// простое masonry, решил не использовать чужой велосипед и написал 3 строчки css.
+// Думаю так быстрее работает и при переполнении ничего не рушится
+.catalog__galery {
+  column-width: 360px;
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.catalog__item {
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+  background: #fff;
+  z-index: 1;
+}
+
+//имена котиков
+.catalog__item::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  padding-left: 24px;
+  width: 360px;
+  height: 42px;
+  box-sizing: border-box;
+  background-color: #333333;
+  text-align: left;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 42px;
+}
+
+.catalog__item:hover::before {
+  background-color: #413471;
+  background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
+}
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .catalog {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+  .catalog__galery {
+    column-width: 355px;
+    column-count: 2;
+    column-gap: 15px;
+  }
+
+}
+
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .catalog {
+    .width-phone;
+    margin-bottom: 0;
+    .padding-container(0px);
+  }
+
+  .catalog__galery {
+    margin: 0;
+    padding: 0;
+    column-width: 0px;
+    column-count: 0;
+    column-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalog__title {
+    font-size: 36px;
+    margin: 50px 0;
+  }
+
+  .catalog__item,
+  .catalog__img {
+    width: 100%;
+    display: block;
+  }
+
+  .catalog__item::before {
+    width: 100%;
+  }
+
+}

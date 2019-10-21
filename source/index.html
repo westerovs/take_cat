@@ -2,45 +2,159 @@
 <html lang="ru">
 <head>		
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="description" content="Шаблон">
-  <meta name="Keywords" content="Шаблон"> 
-  <title>Шаблон</title>
-  <script type="text/javascript" src="js/index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Возьми домой котика">
+  <meta name="Keywords" content="котики"> 
+  <title>Котик на час.. мурр</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/style.css" >
   <link rel="stylesheet" href="css/normalize.css">
 </head>
-<body> 		
+  <body> 		
 
-  <div class="wpapper">
-
-    <header class="header">
-      <div class="header__container-logo">
-        <img  class="header__logo" src="img/cat_logo.svg" alt="Логотип котик" class="logo">
-        <span class="header__logo-text">
+    <div class="wrapper">
+      <!-- логотип / контакты -->
+      <header class="header">
+        <div class="header__container-logo">
+          <img class="header__logo logo" src="img/cat_logo.svg" alt="Логотип котик">
           <a class="header__logo-link" href="#">Котик на час</a>
-        </span>
-      </div>
-      
-      <div class="header__contacts">
-        <ul class="header__list">
-
-          <li class="header__item">
-            Пушкинская, 28
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="tel:+7(928)5676454">
-              + 7 928 567 64 54
-            </a>
-          </li>
-
+        </div>
+        <div class="header__contacts">
+          <ul class="header__list">
+            <li class="header__item" tabindex="0">
+              Пушкинская, 28
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="tel:+7(928)5676454">
+                + 7 928 567 64 54
+              </a>
+            </li>
           </ul>
         </div>
       </header>
 
+
+      <!-- навигация -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a  class="nav__link" href="#">О нас</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Услуги</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Сертификаты</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Условия аренды</a></li> 
+          <li class="nav__item">
+            <a  class="nav__link nav__active" href="#">Фото</a></li>
+          <li class="nav__item">
+            <a  class="nav__link" href="#">Контакты</a></li>
+          <li class="nav__callback">
+            <a class="nav__callback-link modal-show" data-modal="#sign-in" href="#">
+              Обратный звонок
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+
+      <!-- cлайдер -->
+      <div class="slider-container">
+        <section class="lazy slider" data-sizes="50vw">
+          <h2 class="visually-hidden">слайдер валидности</h2>
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488" alt="слайдер котика">
+          </div>
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488" alt="слайдер котика">
+          </div>
+          <div>
+            <img src="img/s1.jpg" width="1140" height="488" alt="слайдер котика">
+          </div>
+        </section>
+      </div>
+      
+
+      <!-- каталог -->
+      <article class="catalog">
+        <h1 class="catalog__title">Возьми домой котика</h1>
+        <div class="catalog__galery">
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/1.jpg" width="360" height="224" alt="Люси 3 года" />
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/4.jpg" width="360" height="224" alt="Люси 3 года" />
+          </a>
+          <a class="catalog__item" data-title="Марта, 2 месяца" href="#">
+            <img class="catalog__img" src="img/2.jpg" width="360" height="478" alt="Марта, 2 месяца" /> 
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/5.jpg" width="360" height="478" alt="Люси 3 года" />
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/6.jpg" width="360" height="224" alt="Люси 3 года" />
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/3.jpg" width="360" height="224" alt="Люси 3 года" /> 
+          </a>
+          <a class="catalog__item" data-title="Люси, 3 года" href="#">
+            <img class="catalog__img" src="img/7.jpg" width="360" height="224" alt="Люси 3 года" />
+          </a>
+        </div>
+      </article>    
     </div>
 
 
+    <!-- футер -->
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__agreements">
+          <a href="">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__contacts">
+          <ul class="footer__list">
+            <li class="footer__item">
+              Пушкинская, 28
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+7(928)5676454">
+                + 7 928 567 64 54
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer> 
 
+    <!-- модальное окно -->
+    <div class="modal-wrap hide" id="sign-in">
+      <div class="modal">
+        <button class="modal-close">Х</button>
+        <form action="http://westerovs.ru/" method="post">
+          
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя">
+          
+          <label for="phone">Ваш телефон:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="7 961 601 2077" required>
+          
+          <div class="buttons">
+            <input type="submit" value="Заказать">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- скрипт слайдера -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>
+    <script src="./slick/slick.js" ></script>
+    <script src="slick/slick.min.js"></script>
+    <!-- запуск слайдера -->
+    <script src="js/slider.js" ></script>
+    <!-- модальное окно -->
+    <script src="js/modal.js"></script>
   </body>
-  </html>
+</html>

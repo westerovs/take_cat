@@ -1,0 +1,110 @@
+.nav {
+  width: 100%;
+  background-color: @nav;
+  margin-bottom: 56px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  .block-center;
+  .padding-container(50px);
+  background-color: @nav;
+}
+
+.nav__item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+.nav__link:hover {
+  background-color: @nav-hover;
+}
+
+// обратный звонок
+.nav__callback {
+  position: relative;
+  margin-left: 56px;
+  width: 218px;
+  height: 43px;
+  border-radius: 22px;
+  background-color: @callback;
+  text-align: center;
+
+}
+
+.nav__callback::before {
+  content: "";
+  background-image: url(../../img/call.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 15px;
+  top: 14px;
+  left: 24px;
+  cursor: pointer;
+}
+
+.nav__callback-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8px;
+  width: 100%;
+  height: 100%;
+  color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 43px;
+}
+
+
+
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .nav__list {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+  .nav__item {
+    width: 100%;
+  }
+
+  .nav__callback {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+  }
+}
+
+
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .nav__list {
+    .width-phone;
+  }
+
+}

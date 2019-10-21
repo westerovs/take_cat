@@ -1,26 +1,21 @@
-// Позиционирование
-// Блочная модель
-// Типографика
-// Оформление
-// Анимация
-// Разное
 
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 20px 15px 0 15px;
-  width: 1170px;
+  .block-center;
+  .padding-container(15px);
+  padding-top: 20px;
   min-height: 110px;
-  outline: 1px dashed #000;
 }
-
-
 
 // блок логотип
 .header__container-logo {
   min-width: 270px;
   flex-grow: 1;
+}
+
+.header__logo {
+  display: inline-block;
 }
 
 .header__logo-link {
@@ -71,8 +66,36 @@
 }
 
 
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  
+  .header {
+    .width-tablet;
+    flex-direction: column;
+  }
 
+  .header__logo-link {
+    font-size: 40px;
+  }
 
+  .header__container-logo {
+    margin: 0 auto;
+  }
+
+  .header__contacts {
+    .visually-hidden;
+  }
+}
+
+// ********** phone **********
+
+@media screen and (max-width: 375px) {
+
+  .header {
+    .width-phone;
+  }
+
+}
 
 
 

@@ -1,12 +1,19 @@
 // сброс для нормалайза
-
-html {
+html,
+body {
+  height: 100%;
   box-sizing: border-box;
   font-family: Geometria;
 }
 
+// для прижимания футера
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 *, *:before, *:after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 // picture {
@@ -40,15 +47,69 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 // Шрифты
 @import 'fonts.less';
-// Блок wrapper
-@import 'blocks/wrapper.less';
 // Блок хэдэр
 @import 'blocks/header.less';
+// Блок навигации
+@import 'blocks/navigation.less';
+// Модальное окно педальное
+@import 'blocks/modal.less';
+// слайдер
+@import 'blocks/slider.less';
+// каталог
+@import 'blocks/catalog.less';
+// футер
+@import 'blocks/footer.less';
 
 // цвета
 @white: #ffffff;
 @black: #171717;
+@nav: #413471;
+@nav-hover: #241D3E;
+@callback: #6d5cad;;
+@footer-bg: #d3d3d0;
+
+// декстоп центровщик
+.block-center {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+// активная ссылка
+.nav__active {
+  color: #ccc;
+  font-size: bold;
+}
+
+// размер планшета
+.width-tablet(@width: 768px) {
+  width: @width;
+}
+
+// размер телефона
+.width-phone(@width: 375px) {
+  width: @width;
+}
+
+
+// общий паддинг страницы
+.padding-container(@padding: 15px) {
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+// альтернатива дисп.none
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

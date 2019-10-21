@@ -1,0 +1,72 @@
+.slider-container {
+  .block-center;
+  .padding-container(15px);
+  margin-bottom: 112px;
+}
+
+// slick slaider
+
+.slick-dots li button:before {
+  font-size: 25px !important;
+  top: -37px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev {
+  left: 21px;
+  z-index: 100;
+  height: 39px;
+  width: 22px;
+  background-image: url(../../img/arr-left.svg)!important;
+  background-repeat: no-repeat !important;
+}
+
+.slick-next {
+  right: 21px;
+  z-index: 100;
+  height: 39px;
+  width: 22px;
+  background-image: url(../../img/arr-right.svg)!important;
+  background-repeat: no-repeat !important;
+}
+
+.slick-next:hover
+.slick-prev:hover {
+  background-color: red;
+  color: red;
+}
+
+.red {
+  fill: #fff;
+}
+.icon {
+  background-color: red;
+  color: red;
+  fill: #fff;
+}
+
+
+
+// ********** tablet **********
+@media screen and (max-width: 768px) {
+  .slider-container {
+    .width-tablet;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .slider-container {
+    .width-phone;
+    margin-bottom: 0;
+    .padding-container(0px);
+  }
+
+}
+
