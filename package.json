@@ -1,7 +1,7 @@
 {
   "name": "test-work",
   "version": "17.0.0",
-  "private": true,
+  "private": false,
   "description": "Тестовое задание",
   "devDependencies": {
     "autoprefixer": "9.5.x",
