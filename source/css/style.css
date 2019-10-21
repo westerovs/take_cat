@@ -127,6 +127,7 @@ body {
 @media screen and (max-width: 768px) {
   .header {
     width: 768px;
+    margin: 35px auto 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -242,13 +243,26 @@ body {
   font-weight: 500;
   line-height: 43px;
 }
+.none {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .nav__list {
+    position: fixed;
+    top: 0;
+    height: 40px;
     width: 768px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    z-index: 200;
+  }
+  .nav__list:hover {
+    height: 65%;
+  }
+  .none {
+    display: block;
   }
   .nav__item {
     width: 100%;
@@ -258,7 +272,7 @@ body {
     margin-bottom: 15px;
   }
   .nav__link {
-    font-size: 20px;
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 375px) {
@@ -362,6 +376,9 @@ input[type="submit"] {
   background-image: url(../../img/arr-left.svg) !important;
   background-repeat: no-repeat !important;
 }
+.slick-prev:hover {
+  background-image: url(../../img/arr-left-hover.svg) !important;
+}
 .slick-next {
   right: 21px;
   z-index: 100;
@@ -370,17 +387,8 @@ input[type="submit"] {
   background-image: url(../../img/arr-right.svg) !important;
   background-repeat: no-repeat !important;
 }
-.slick-next:hover .slick-prev:hover {
-  background-color: red;
-  color: red;
-}
-.red {
-  fill: #fff;
-}
-.icon {
-  background-color: red;
-  color: red;
-  fill: #fff;
+.slick-next:hover {
+  background-image: url(../../img/arr-right-hover.svg) !important;
 }
 @media screen and (max-width: 768px) {
   .slider-container {
@@ -400,6 +408,7 @@ input[type="submit"] {
   }
 }
 .catalog {
+  position: relative;
   margin: 0 auto;
   width: 1170px;
   padding-left: 15px;
@@ -407,12 +416,23 @@ input[type="submit"] {
   margin-bottom: 124px;
 }
 .catalog__title {
-  margin-bottom: 88px;
+  margin-bottom: 40px;
   text-align: center;
   color: #171717;
   font-size: 48px;
   font-weight: 500;
   line-height: 24px;
+}
+.line {
+  display: block;
+  margin: 0 auto 40px auto;
+  width: 118px;
+  height: 8px;
+  background-image: url(../../img/line.svg);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: auto 8px;
+  z-index: 4;
 }
 .catalog__galery {
   -webkit-column-width: 360px;
@@ -471,6 +491,16 @@ input[type="submit"] {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
+  }
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 375px) {
@@ -588,10 +618,6 @@ input[type="submit"] {
 .block-center {
   margin: 0 auto;
   width: 1170px;
-}
-.nav__active {
-  color: #ccc;
-  font-size: bold;
 }
 .visually-hidden {
   position: absolute;
