@@ -76,9 +76,33 @@
   .catalog {
     .width-phone;
     margin-bottom: 0;
+    .padding-container(0px);
   }
+
+  .catalog__galery {
+    margin: 0;
+    padding: 0;
+    column-width: 0px;
+    column-count: 0;
+    column-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .catalog__title {
     font-size: 36px;
     margin: 50px 0;
   }
+
+  .catalog__item,
+  .catalog__img {
+    width: 100%;
+    display: block;
+  }
+
+  .catalog__item::before {
+    width: 100%;
+  }
+
 }
